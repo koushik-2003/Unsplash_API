@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px; /* Set a max width */
+    margin: auto; /* Center the container */
+}
+
+#searchQuery {
+    padding: 10px;
+    width: 300px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#imageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#imageGrid img {
+    width: 100%;
+    height: auto;
+    display: block; /* Prevents small gaps below images */
+    border-radius: 4px; /* Optional: adds rounded corners */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 800px) {
+    #imageGrid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 2 columns */
+    }
+}
+
+@media (max-width: 500px) {
+    #imageGrid {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+}
